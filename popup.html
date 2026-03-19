@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 220px;
+      background: #0f1117;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 16px;
+    }
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .legend { display: flex; flex-direction: column; gap: 6px; }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .swatch.positive { background: rgba(34, 197, 94, 0.5); border: 1px solid #22c55e; }
+    .swatch.neutral  { background: rgba(234, 179, 8, 0.5);  border: 1px solid #eab308; }
+    .swatch.negative { background: rgba(239, 68, 68, 0.5);  border: 1px solid #ef4444; }
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 12px 0;
+    }
+    .note {
+      font-size: 10px;
+      color: #4b5563;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <h2>X Sentiment Analyzer</h2>
+  <div class="legend">
+    <div class="legend-item"><div class="swatch positive"></div> Positive</div>
+    <div class="legend-item"><div class="swatch neutral"></div> Neutral</div>
+    <div class="legend-item"><div class="swatch negative"></div> Negative</div>
+  </div>
+  <div class="divider"></div>
+  <div class="note">Tweets are analyzed in batches as you scroll. Hover a tweet to see the detected emotion.</div>
+</body>
+</html>
